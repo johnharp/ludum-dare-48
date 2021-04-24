@@ -444,7 +444,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417291326}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bb6c0e890796f4880bf6f88d841d34c6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -636,7 +636,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673247849}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bb6c0e890796f4880bf6f88d841d34c6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -817,6 +817,14 @@ PrefabInstance:
     - target: {fileID: 6920950031208936974, guid: bab8a81f867314715ab40925954fe244, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920950031208936974, guid: bab8a81f867314715ab40925954fe244, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920950031208936974, guid: bab8a81f867314715ab40925954fe244, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8050565149829693205, guid: bab8a81f867314715ab40925954fe244, type: 3}
       propertyPath: m_Name
