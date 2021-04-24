@@ -293,6 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829849716}
   - component: {fileID: 829849715}
+  - component: {fileID: 829849717}
   m_Layer: 0
   m_Name: LevelControllers
   m_TagString: Untagged
@@ -330,6 +331,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &829849717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829849714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b7a447151464a4daedba79735ca7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefabs:
+  - {fileID: 8365569801869186919, guid: 10571cabc091b4bdf85a36897e3232e5, type: 3}
+  - {fileID: 4769019471763340670, guid: 394ffca0d5b6742499657fe7359bef01, type: 3}
 --- !u!1 &1828082754
 GameObject:
   m_ObjectHideFlags: 0

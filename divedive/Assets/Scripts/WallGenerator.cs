@@ -7,8 +7,8 @@ public class WallGenerator : MonoBehaviour
     [SerializeField]
     private GameObject[] wallPrefabs;
 
-    private float leftWallX = -20f;
-    private float rightWallX = 20f;
+    private float leftWallX = -30f;
+    private float rightWallX = 30f;
     private float tileYsize = 20f;
 
     private int slidingWindowSize = 2;
