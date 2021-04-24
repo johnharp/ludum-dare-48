@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8050565150294108642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167535466598792577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecffda13dc99641feadc48ae978bd1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRate: 700
+  YRate: 0
+  ZRate: 0
 --- !u!1 &8050565149829693205
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +25,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8050565149829693207}
   - component: {fileID: 8050565149829693206}
+  - component: {fileID: 526520308}
+  - component: {fileID: 6920950031208936974}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -47,6 +64,36 @@ MonoBehaviour:
   ThrustImpulse: 1
   Dampening: 0.3
   MaxVelocity: 5
+--- !u!136 &526520308
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050565149829693205}
+  m_Material: {fileID: 13400000, guid: bb6c0e890796f4880bf6f88d841d34c6, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3281868
+  m_Height: 5.267021
+  m_Direction: 0
+  m_Center: {x: 0.021642208, y: -0.100394726, z: 0}
+--- !u!54 &6920950031208936974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050565149829693205}
+  serializedVersion: 2
+  m_Mass: 0.01
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8050565149939297121
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,21 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04b1ff1f7378474dbfa16772af50291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8050565150294108642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7167535466598792577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecffda13dc99641feadc48ae978bd1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  XRate: 700
-  YRate: 0
-  ZRate: 0
 --- !u!1001 &8050565150990080028
 PrefabInstance:
   m_ObjectHideFlags: 0

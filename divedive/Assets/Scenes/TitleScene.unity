@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 176148805}
+  - component: {fileID: 176148807}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -147,14 +148,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176148804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.013355, y: -0.73735, z: 0}
+  m_LocalScale: {x: 0.64857, y: 0.64857, z: 0.64857}
   m_Children:
   - {fileID: 1165499049}
   - {fileID: 912672088}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &176148807
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176148804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d77b824388f547d690326bbb4b084c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &411533742
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +335,7 @@ GameObject:
   - component: {fileID: 1157300520}
   - component: {fileID: 1157300519}
   m_Layer: 5
-  m_Name: Press any Key Text (TMP)
+  m_Name: Start Key Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,7 +380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press any Key to Begin
+  m_text: Press space to Begin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7444ed56603c43c98281ac7631812b9, type: 2}
   m_sharedMaterial: {fileID: -6086944682218629717, guid: e7444ed56603c43c98281ac7631812b9, type: 2}
@@ -369,8 +389,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290639615
+  m_fontColor: {r: 1, g: 0.96430874, b: 0.740566, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -387,8 +407,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -593,7 +613,7 @@ GameObject:
   - component: {fileID: 1714755899}
   - component: {fileID: 1714755898}
   m_Layer: 0
-  m_Name: TitleController
+  m_Name: TitleControllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
