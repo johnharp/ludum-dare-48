@@ -313,9 +313,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallPrefabs:
-  - {fileID: 919132149155446097, guid: 6370e52ba2be3436597f6fda7bdcaf13, type: 3}
-  - {fileID: 919132149155446097, guid: 229cb500b1ad44bed820120583988618, type: 3}
-  - {fileID: 919132149155446097, guid: fea8eb9ede7e24d08b718372c5ef56e4, type: 3}
+  - {fileID: 4990704969730828263, guid: 9a6f9e6a18d02441dac49e8b7dcd78ce, type: 3}
+  - {fileID: 5417859608378952102, guid: c620f6d0e7a7d442d99bc531bcea3047, type: 3}
+  - {fileID: 4579360943438754062, guid: d23a48bdb6e43403c9d2907a3bbcdeec, type: 3}
 --- !u!4 &829849716
 Transform:
   m_ObjectHideFlags: 0

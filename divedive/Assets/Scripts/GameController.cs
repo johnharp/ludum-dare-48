@@ -11,6 +11,10 @@ public class GameController : MonoBehaviour
 
 
     private GameObject Player = null;
+    public GameObject GetPlayerGameObject()
+    {
+        return Player;
+    }
 
 
 
