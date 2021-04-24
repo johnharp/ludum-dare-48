@@ -18,9 +18,6 @@ public class BubbleGenerator : MonoBehaviour
     private GameController GameController = null;
     private GameObject Player = null;
 
-    //List<GameObject> bubbles = new List<GameObject>();
-
-    // Start is called before the first frame update
     void Start()
     {
         GameObject controllers = GameObject.Find("Controllers");
@@ -51,28 +48,6 @@ public class BubbleGenerator : MonoBehaviour
         }
     }
 
-    //private void destroyBubbles()
-    //{
-    //    List<GameObject> bubblesToDestroy = new List<GameObject>();
-    //    foreach(var bubble in bubbles)
-    //    {
-    //        float dist = Mathf.Abs(
-    //            bubble.transform.position.y -
-    //            Player.transform.position.y);
-
-
-    //        if (dist > despawnDistance)
-    //        {
-    //            bubblesToDestroy.Add(bubble);
-    //        } 
-    //    }
-
-    //    foreach(var bubble in bubblesToDestroy)
-    //    {
-    //        bubbles.Remove(bubble);
-    //        Destroy(bubble);
-    //    }
-    //}
 
     private void chooseNewNextSpawnTime()
     {

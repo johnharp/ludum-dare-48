@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FloatUpward : MonoBehaviour
 {
+    [SerializeField]
     private float minSpeed = 3f;
+    [SerializeField]
     private float maxSpeed = 10f;
 
     private float speed = 0f;
