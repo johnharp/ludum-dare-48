@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 thrust = Vector3.zero;
     float thrustTimer = 0f;
-    float thrustDuration = 0.2f;
+    float ThrustDuration = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         if (thrustDirection != Vector3.zero)
         {
             thrust = thrustDirection * thrustImpulse;
-            thrustTimer = thrustDuration;
+            thrustTimer = ThrustDuration;
         }
     }
 
