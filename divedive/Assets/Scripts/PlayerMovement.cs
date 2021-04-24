@@ -5,82 +5,70 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    private float XVelocity = 0f;
-    private float YVelocity = 0f;
+    [SerializeField]
+    private float thrustImpulse = 1.0f;
 
-    [SerializeField]
-    private float ThrustImpulse = 1.0f;
-    [SerializeField]
-    private float Dampening = 0.3f;
-    [SerializeField]
-    private float MaxVelocity = 5.0f;
+    private Rigidbody rigidBody;
+
+    private Vector3 thrust = Vector3.zero;
+    float thrustTimer = 0f;
+    float thrustDuration = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         ApplyEngines();
-        ClampMaxVelocity();
-        Vector3 velocity = new Vector3(XVelocity, YVelocity, 0);
-        transform.Translate(velocity * Time.deltaTime);
-        DampenVelocity();
     }
 
     private void ApplyEngines()
     {
-        float xImpulse = 0;
-        float yImpulse = 0;
+        Vector3 thrustDirection = Vector3.zero;
+
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            yImpulse = ThrustImpulse;
+            thrustDirection = Vector3.up;
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            yImpulse = -ThrustImpulse;
+            thrustDirection = Vector3.down;
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            xImpulse = ThrustImpulse;
+            thrustDirection = Vector3.right;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            xImpulse = -ThrustImpulse;
+            thrustDirection = Vector3.left;
         }
 
-        XVelocity += xImpulse;
-        YVelocity += yImpulse;
+        if (thrustDirection != Vector3.zero)
+        {
+            thrust = thrustDirection * thrustImpulse;
+            thrustTimer = thrustDuration;
+        }
     }
 
-    private void ClampMaxVelocity()
+
+
+
+
+    void FixedUpdate()
     {
-
-
-        if (XVelocity > MaxVelocity) XVelocity = MaxVelocity;
-        if (XVelocity < -MaxVelocity) XVelocity = -MaxVelocity;
-        if (YVelocity > MaxVelocity) YVelocity = MaxVelocity;
-        if (YVelocity < -MaxVelocity) YVelocity = -MaxVelocity;
-    }
-
-    private void DampenVelocity()
-    {
-        float d = Dampening * Time.deltaTime;
-
-        if (XVelocity > -d && XVelocity < d) XVelocity = 0f;
-        else if (XVelocity > d) XVelocity -= d;
-        else if (XVelocity < -d) XVelocity += d;
-
-        if (YVelocity > -d && YVelocity < d) YVelocity = 0f;
-        else if (YVelocity > d) YVelocity -= d;
-        else if (YVelocity < -d) YVelocity += d;
+        if (thrustTimer > 0f)
+        {
+            rigidBody.AddForce(thrust);
+            thrustTimer -= Time.fixedDeltaTime;
+        }
     }
 
 }
