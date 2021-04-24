@@ -95,11 +95,17 @@ public class WallGenerator : MonoBehaviour
                            wallX,
                             (tileNum+i) * tileYsize, 0);
                 GameObject newWall = Instantiate(
-                    wallPrefabs[0],
+                    chooseRandomWall(),
                     pos,
                     Quaternion.identity);
                 walls.Add(newWall);
             }
         }
+    }
+
+    private GameObject chooseRandomWall()
+    {
+        int i = Random.Range(0, wallPrefabs.Length);
+        return wallPrefabs[i];
     }
 }
