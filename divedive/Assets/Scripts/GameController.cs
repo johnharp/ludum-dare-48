@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
+    private UnityEngine.UI.Text DepthText = null;
+
+
+
     private GameObject Player = null;
+
+
 
     private void OnEnable()
     {
@@ -24,5 +31,33 @@ public class GameController : MonoBehaviour
     public void GoToTitle()
     {
         SceneManager.LoadScene("TitleScene");
+    }
+
+    public void UpdateDepthText()
+    {
+        if (Player == null) return;
+
+        float depth = Player.transform.position.y;
+
+        if (depth >= 0) depth = 0;
+        else depth = -depth;
+
+        string depthStr;
+
+        if (depth >= 1000)
+        {
+            depthStr = $"{(depth/1000).ToString("#,###.00")} km";
+        }
+        else
+        {
+            depthStr = $"{depth.ToString("N0")} m";
+        }
+
+        DepthText.text = depthStr;
+    }
+
+    public void Update()
+    {
+        UpdateDepthText();
     }
 }
