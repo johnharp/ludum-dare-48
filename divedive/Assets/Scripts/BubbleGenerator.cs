@@ -9,7 +9,7 @@ public class BubbleGenerator : MonoBehaviour
 
     private float spawnDistance = -40f;
 
-    private float despawnDistance = 100f;
+    //private float despawnDistance = 100f;
 
     private float nextSpawnTime = 0.0f;
     private float minSpawnInterval = 0.1f;
@@ -18,7 +18,7 @@ public class BubbleGenerator : MonoBehaviour
     private GameController GameController = null;
     private GameObject Player = null;
 
-    List<GameObject> bubbles = new List<GameObject>();
+    //List<GameObject> bubbles = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class BubbleGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        destroyBubbles();
+        //destroyBubbles();
 
         if (Time.time >= nextSpawnTime)
         {
@@ -46,33 +46,33 @@ public class BubbleGenerator : MonoBehaviour
                 bubblePrefab,
                 pos,
                 Quaternion.identity);
-            bubbles.Add(newBubble);
+            //bubbles.Add(newBubble);
             chooseNewNextSpawnTime();
         }
     }
 
-    private void destroyBubbles()
-    {
-        List<GameObject> bubblesToDestroy = new List<GameObject>();
-        foreach(var bubble in bubbles)
-        {
-            float dist = Mathf.Abs(
-                bubble.transform.position.y -
-                Player.transform.position.y);
+    //private void destroyBubbles()
+    //{
+    //    List<GameObject> bubblesToDestroy = new List<GameObject>();
+    //    foreach(var bubble in bubbles)
+    //    {
+    //        float dist = Mathf.Abs(
+    //            bubble.transform.position.y -
+    //            Player.transform.position.y);
 
 
-            if (dist > despawnDistance)
-            {
-                bubblesToDestroy.Add(bubble);
-            } 
-        }
+    //        if (dist > despawnDistance)
+    //        {
+    //            bubblesToDestroy.Add(bubble);
+    //        } 
+    //    }
 
-        foreach(var bubble in bubblesToDestroy)
-        {
-            bubbles.Remove(bubble);
-            Destroy(bubble);
-        }
-    }
+    //    foreach(var bubble in bubblesToDestroy)
+    //    {
+    //        bubbles.Remove(bubble);
+    //        Destroy(bubble);
+    //    }
+    //}
 
     private void chooseNewNextSpawnTime()
     {
