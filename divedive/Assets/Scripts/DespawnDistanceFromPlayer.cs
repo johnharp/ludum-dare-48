@@ -20,8 +20,12 @@ public class DespawnDistanceFromPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float playerY = 0;
+
+        if (Player != null) playerY = Player.transform.position.y;
+
         float dist = Mathf.Abs(
-            Player.transform.position.y -
+            playerY -
             transform.position.y);
 
         if (dist > despawnDistance)

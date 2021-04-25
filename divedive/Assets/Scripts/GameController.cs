@@ -11,12 +11,19 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
+    [SerializeField]
+    private UnityEngine.UI.RawImage HullStatusRawImage = null;
+
+    [SerializeField]
+    private Texture[] HullStatusImages = null;
+
     private GameObject Player = null;
     public GameObject GetPlayerGameObject()
     {
         return Player;
     }
 
+    private int hullStatus = 4;
 
 
     private void OnEnable()
@@ -64,5 +71,35 @@ public class GameController : MonoBehaviour
     public void Update()
     {
         UpdateDepthText();
+    }
+
+    public void Harm(int v)
+    {
+        hullStatus -= v;
+        hullStatus = Mathf.Max(hullStatus, 0);
+
+        UpdateHullStatus();
+
+        if (hullStatus == 0)
+        {
+            //AudioSource.PlayClipAtPoint(DeathSound, transform.position, 1f);
+            Player.SetActive(false);
+            StartCoroutine(GoToGameOver());
+        }
+
+    }
+
+    public IEnumerator GoToGameOver()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("GameOverScene");
+    }
+
+
+
+    private void UpdateHullStatus()
+    {
+        Texture t = HullStatusImages[hullStatus];
+        HullStatusRawImage.texture = t;
     }
 }
