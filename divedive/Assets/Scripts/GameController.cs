@@ -47,7 +47,11 @@ public class GameController : MonoBehaviour
 
     public void UpdateDepthText()
     {
-        if (Player == null) return;
+        if (Player == null)
+        {
+            DepthText.text = "0 m";
+            return;
+        }
 
         float depth = Player.transform.position.y;
 
@@ -70,7 +74,15 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        UpdateDepthText();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
+
+        if (Player != null)
+        {
+            UpdateDepthText();
+        }
     }
 
     public void Harm(int v)
@@ -101,5 +113,20 @@ public class GameController : MonoBehaviour
     {
         Texture t = HullStatusImages[hullStatus];
         HullStatusRawImage.texture = t;
+    }
+
+    public void RestartGame()
+    {
+        hullStatus = 4;
+        UpdateDepthText();
+        UpdateHullStatus();
+
+        SceneManager.LoadScene("Level-01");
+
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

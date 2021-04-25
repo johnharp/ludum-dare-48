@@ -380,7 +380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press space to Begin
+  m_text: Press 'space' to Begin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7444ed56603c43c98281ac7631812b9, type: 2}
   m_sharedMaterial: {fileID: -6086944682218629717, guid: e7444ed56603c43c98281ac7631812b9, type: 2}
