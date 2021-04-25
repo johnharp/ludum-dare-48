@@ -33,12 +33,6 @@ public class ExplodeArray : MonoBehaviour
         {
             foreach (var obj in explosionGameObjects)
             {
-                Vector3 dir =
-                    (obj.transform.position - transform.position).normalized;
-                Vector3 targetPosition = dir * 10.0f;
-
-                //obj.transform.position =
-                //    Vector3.Lerp(transform.position, targetPosition, progress);
                 obj.transform.localScale =
                     Vector3.Lerp(InitialScale, FinalScale, progress);
             }

@@ -59,7 +59,7 @@ MonoBehaviour:
   - {fileID: 3402669254892408479}
   InitialScale: {x: 0, y: 0, z: 0}
   FinalScale: {x: 8, y: 8, z: 8}
-  Speed: 5
+  Speed: 4
 --- !u!82 &8746369310644362913
 AudioSource:
   m_ObjectHideFlags: 0
