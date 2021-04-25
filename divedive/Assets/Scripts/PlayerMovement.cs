@@ -31,25 +31,27 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 thrustDirection = Vector3.zero;
 
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (thrustTimer == 0.0f)
         {
-            thrustDirection = Vector3.up;
-        }
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                thrustDirection = Vector3.up;
+            }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            thrustDirection = Vector3.down;
-        }
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                thrustDirection = Vector3.down;
+            }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            thrustDirection = Vector3.right;
-        }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                thrustDirection = Vector3.right;
+            }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            thrustDirection = Vector3.left;
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                thrustDirection = Vector3.left;
+            }
         }
 
         if (thrustDirection != Vector3.zero)
@@ -70,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.AddForce(thrust);
             thrustTimer -= Time.fixedDeltaTime;
         }
+
+        if (thrustTimer < 0.0f) thrustTimer = 0.0f;
     }
 
 }
