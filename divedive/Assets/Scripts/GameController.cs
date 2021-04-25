@@ -8,7 +8,8 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.Text DepthText = null;
 
-
+    [SerializeField]
+    private AudioSource audioSource;
 
     private GameObject Player = null;
     public GameObject GetPlayerGameObject()

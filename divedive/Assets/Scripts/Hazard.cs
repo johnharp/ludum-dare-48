@@ -7,6 +7,7 @@ public class Hazard : MonoBehaviour
     [SerializeField]
     private GameObject explosionPrefab;
 
+
     private void OnCollisionEnter(Collision collision)
     {
         
