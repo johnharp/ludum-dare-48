@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     float thrustTimer = 0f;
     float ThrustDuration = 0.2f;
 
+
     // Start is called before the first frame update
     void Start()
     {
